@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class Pewarisan</title>
+</head>
+<body>
+    <p id = "hasil"></p>
+    <script>
+        class vehicle {
+            constructor(licensePlate,manufacture){
+                this.licensePlate = licensePlate;
+                this.manufacture = manufacture;
+            }
+            info(){
+                return `Nomor kendaraan: ${this.licensePlate}`+" dengan "+ `Manufacture: ${this.manufacture}`;
+                console.log(`Nomor kendaraan: ${this.licensePlate}`);
+                console.log(`Manufacture: ${this.manufacture}`);
+            }
+            parking(){
+                return `Kendaraan ${this.licensePlate} parking!`;
+                console.log(`Kendaraan ${this.licensePlate} parking!`);
+            }
+        }
+        class Car extends vehicle{
+            constructor(licensePlate,manufacture,wheels){
+                super(licensePlate,manufacture);
+                this.wheels = wheels;
+            }
+            droveOff(){
+                return `Kendaraan ${this.licensePlate} Melajuu!!`;
+                console.log(`Kendaraan ${this.licensePlate} Melajuu!!`);
+            }
+            openDoor(){
+                return `Membuka Pintu!`;
+                console.log(`Membuka Pintu!`)
+            }
+            
+           show(){
+                return " agar "+ this.parking() + " supaya " + this.droveOff() + " dan dapat " + this.openDoor();
+            } 
+            /*overiding method info dari parent class*/
+            info(){
+                super.info();
+                console.log(`jumlah roda: ${this.wheels}`);
+            }
+        }
+        
+        /*let mobilku = new car ("E 4566 VW","Toyota","Manual");
+        document.getElementById("hasil").innerHTML=mobilku.show();
+        console.log(mobilku.info());
+        console.log(mobilku.parking());
+        console.log(mobilku.droveOff());
+        console.log(mobilku.openDoor());
+        console.log(mobilku.show()); */
+
+        const car = new Car("H12S","Honda",4);
+        car.info();
+        
+    </script>
+    
+</body>
+</html>
