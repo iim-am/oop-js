@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh class parameter</title>
+</head>
+<body>
+    <p id="hasil"></p>
+        <script>
+            class Bilangan {
+                static methodku(){
+                    return "Heloo..."
+                }
+                    
+            }
+            const hasil =  document.getElementById("hasil");
+            let bil = new Bilangan();
+            hasil.innerHTML="Hasil= " + Bilangan.methodku();
+        </script>
+    
+</body>
+</html>
