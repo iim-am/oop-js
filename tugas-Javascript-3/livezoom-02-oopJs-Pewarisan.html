@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>latihan pewarisan</title>
+</head>
+<body>
+    <p id = "hasil"></p>
+    <script>
+        class Buku {
+            constructor (judul){
+                this.namaBuku= judul;
+            }
+            tampilkan(){
+                return "judul buku ini adalah " + this.namaBuku;
+            }
+        }
+        class Pengarang extends Buku {
+            constructor(judul, pnrg){
+                super(judul);
+                this.Pengarang = pnrg;
+            }
+            show(){
+                return this.tampilkan() + ", dg Pengarang " + this.Pengarang;
+            }
+        }
+
+        let bukuku = new Pengarang ("Kabayan","Benyamin");
+        document.getElementById("hasil").innerHTML=bukuku.show();
+    </script>
+</body>
+</html>
