@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh objek 1</title>
+</head>
+<body>
+    <p id="hasil"></p>
+    <script>
+        // Cara mendefinisakn objek
+        let orang = {
+            namaDepan : "Iim",
+            namaBelakang : "Mafahir",
+            warnaMata   : "biru"
+        }
+        orang.kebangsaan = "Indonesia"; //Menambah properti
+        delete orang.warnaMata; //menghapus properti
+        const hasil = document.getElementById("hasil");
+        // cara menampilkan property objek
+        hasil.innerHTML= "Nama Lengkap :" + orang.namaDepan + " "+ orang.namaBelakang
+        + "<br> Warna Mata : " + orang.warnaMata + "<br>Kebangsaan :" + orang.kebangsaan;
+        
+        //cara mengakses object via loop
+        let pesan = "";
+        let id;
+        for(id in orang){
+            pesan = pesan + orang[id] + " ";
+            console.log("id = " + id);
+            // console.log("orang = ")
+        }
+        
+        console.log(orang["namaDepan"])
+        const hasil2 = document.getElementById("hasil");
+        hasil2.innerHTML = pesan;
+    </script>
+</body>
+</html>
