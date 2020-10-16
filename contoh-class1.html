@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contoh class</title>
+</head>
+<body>
+    <p> ini adalah contoh class pada javascript</p>
+    <p id = "hasil"></p>
+    <script>
+        class Mahasiswa {
+            constructor (nim,namaDepan,namaBelakang,umur) {
+                this.nim = nim;
+                this.namaDepan= namaDepan;
+                this.namaBelakang = namaBelakang;
+                this.umur = umur;
+            }
+        }
+        
+        objMhs = new Mahasiswa("001", "iim","Mafahir", 28);
+        const hasil = document.getElementById("hasil");
+        let dataMhs1 =
+        "NIM = " + objMhs.nim + "<br>" +
+        "Nama Depan = " + objMhs.namaDepan + "<br>"+
+        "Nama Belakang= " + objMhs.namaBelakang+ "<br>"+
+        "umur = " + objMhs.umur;
+
+        objMhs2 = new Mahasiswa("002","Anto","Nugroho", 17);
+        let dataMhs2 = "<hr>"+
+        "NIM = " + objMhs2.nim + "<br>"+
+        "Nama Depan = " + objMhs2.namaDepan + "<br>"+
+        "Nama Belakang = " + objMhs2.namaBelakang +"<br>"
+        "umur = " + objMhs2.umur;
+
+        hasil.innerHTML=dataMhs1 + dataMhs2;
+
+    </script>
+</body>
+</html>
