@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contoh class</title>
+</head>
+<body>
+    <p> ini adalah contoh class pada javascript</p>
+    <p id = "hasil"></p>
+    <script>
+        class Buku {
+            constructor (idBuku,judulBuku,namaPengarang) {
+                this.idBuku = idBuku;
+                this.judulBuku= judulBuku;
+                this.namaPengarang = namaPengarang;
+            }
+            get getIdBuku(){
+                return this.idBuku;
+            }
+            get getJudulBuku(){
+                return this.judulBuku;
+            }
+            get getNamaPengarang(){
+                return this.namaPengarang;
+            }
+            get getNamaLengkap(){
+                return this.judulBuku+ " "+ this.namaPengarang;
+            }
+            tampil = () => {
+                return this.getNamaLengkap;
+            }
+        }
+        
+        objBk1 = new Buku("001", "Laskar Pelangi","Andrea Hirata");
+        const hasil = document.getElementById("hasil");
+        let dataBk1 =
+        "Id Buku = " + objBk1.getIdBuku + "<br>" +
+        "Judul buku = " + objBk1.getJudulBuku + "<br>"+
+        "Nama Pengarang= " + objBk1.getNamaPengarang+ "<br>";
+
+        objBk2 = new Buku("002","Kabayan","Benyamin");
+        let dataBk2 = "<hr>"+
+        "Id buku = " + objMhs2.getNim + "<br>"+
+        "Judul Buku = " + objMhs2.getNamaDepan + "<br>"+
+        "Nama Belakang = " + objMhs2.getNamaBelakang +"<br>"
+        "umur = " + objMhs2.getUmur;
+
+        hasil.innerHTML=dataMhs1 + dataMhs2;
+        alert(objMhs2.tampil());
+
+    </script>
+</body>
+</html>
