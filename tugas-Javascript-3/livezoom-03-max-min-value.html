@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh class parameter</title>
+</head>
+<body>
+    <p id="hasil"></p>
+        <script>
+            class Bilangan {
+                tertinggi (){
+                    let maxValue = Number.MIN_VALUE;
+                    for(let i=0; i < arguments.length; i++){
+                        if(arguments[i]>maxValue){
+                            maxValue = arguments[i];
+                        }
+                    }
+                    return maxValue;
+                }
+                terendah (){
+                    let minValue = Number.MAX_VALUE;
+                    for(let i=0; i < arguments.length; i++){
+                        if(arguments[i] < minValue){
+                            minValue = arguments[i];
+                        }
+                    }
+                    return minValue;
+                }
+            }
+            const hasil =  document.getElementById("hasil");
+            let bil = new Bilangan();
+            hasil.innerHTML="Nilai tertinggi= " +  bil.tertinggi(1,2,3)+ "<br>" +
+                            "  Nilai Terendah = " + bil.terendah(1,2,3);
+        </script>
+    
+</body>
+</html>
